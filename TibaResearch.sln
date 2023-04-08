@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instance2", "Instance2\Inst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instance1", "Instance1\Instance1.csproj", "{8E4FBFBB-3261-477C-A21B-65182EB87F23}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HashiCorpConsule", "HashiCorpConsule", "{112D82BE-E910-4587-AF91-62C0B5396331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsulSample", "ConsulSample\ConsulSample.csproj", "{533ECC10-BEB3-40CF-8C86-4F7E876DB02B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,10 @@ Global
 		{8E4FBFBB-3261-477C-A21B-65182EB87F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E4FBFBB-3261-477C-A21B-65182EB87F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E4FBFBB-3261-477C-A21B-65182EB87F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{533ECC10-BEB3-40CF-8C86-4F7E876DB02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{533ECC10-BEB3-40CF-8C86-4F7E876DB02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{533ECC10-BEB3-40CF-8C86-4F7E876DB02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{533ECC10-BEB3-40CF-8C86-4F7E876DB02B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +68,7 @@ Global
 		{E07C7453-2F6A-4461-A18C-CF08EAD0966B} = {C2EE013E-B36E-46F9-B65B-F018505E1753}
 		{450EDD7B-A475-4855-85AC-DABB16E9F01A} = {C2EE013E-B36E-46F9-B65B-F018505E1753}
 		{8E4FBFBB-3261-477C-A21B-65182EB87F23} = {C2EE013E-B36E-46F9-B65B-F018505E1753}
+		{533ECC10-BEB3-40CF-8C86-4F7E876DB02B} = {112D82BE-E910-4587-AF91-62C0B5396331}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86D6AF66-426B-4F67-82A7-FA37413B8044}
