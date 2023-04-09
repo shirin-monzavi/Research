@@ -1,0 +1,28 @@
+{
+  "IndexId": 22,
+  "Name": "Auto/ExternalIntegrationDispatchRequests",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from doc in docs.ExternalIntegrationDispatchRequests\nselect new {\r\n\n}",
+  "Maps": [
+    "from doc in docs.ExternalIntegrationDispatchRequests\nselect new {\r\n\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Auto",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

@@ -1,0 +1,29 @@
+{
+  "IndexId": 21,
+  "Name": "SagaDetailsIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from doc in docs.SagaSnapshots\nselect new {\n\tSagaId = doc.SagaId,\n\tId = doc.SagaId,\n\tSagaType = doc.SagaType,\n\tChanges = new[] {\n\t\tnew {\n\t\t\tEndpoint = doc.Endpoint,\n\t\t\tFinishTime = doc.FinishTime,\n\t\t\tInitiatingMessage = doc.InitiatingMessage,\n\t\t\tOutgoingMessages = doc.OutgoingMessages,\n\t\t\tStartTime = doc.StartTime,\n\t\t\tStateAfterChange = doc.StateAfterChange,\n\t\t\tStatus = doc.Status\n\t\t}\n\t}\n}",
+  "Maps": [
+    "from doc in docs.SagaSnapshots\nselect new {\n\tSagaId = doc.SagaId,\n\tId = doc.SagaId,\n\tSagaType = doc.SagaType,\n\tChanges = new[] {\n\t\tnew {\n\t\t\tEndpoint = doc.Endpoint,\n\t\t\tFinishTime = doc.FinishTime,\n\t\t\tInitiatingMessage = doc.InitiatingMessage,\n\t\t\tOutgoingMessages = doc.OutgoingMessages,\n\t\t\tStartTime = doc.StartTime,\n\t\t\tStateAfterChange = doc.StateAfterChange,\n\t\t\tStatus = doc.Status\n\t\t}\n\t}\n}",
+    "from doc in docs.SagaHistories\nselect new {\n\tSagaId = doc.SagaId,\n\tId = doc.SagaId,\n\tSagaType = doc.SagaType,\n\tChanges = doc.Changes\n}"
+  ],
+  "Reduce": "from result in results\ngroup result by result.SagaId into g\nselect new {\n\tg = g,\n\tfirst = DynamicEnumerable.FirstOrDefault(g)\n} into this0\nselect new {\n\tId = this0.first.SagaId,\n\tSagaId = this0.first.SagaId,\n\tSagaType = this0.first.SagaType,\n\tChanges = Enumerable.ToList(this0.g.SelectMany(x => x.Changes).OrderByDescending(x0 => x0.FinishTime))\n}",
+  "IsMapReduce": true,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "MapReduce",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

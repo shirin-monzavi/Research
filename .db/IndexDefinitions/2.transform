@@ -1,0 +1,8 @@
+{
+  "TransformResults": "from failure in results\nselect new {\n\tfailure = failure,\n\trec = DynamicEnumerable.LastOrDefault(failure.ProcessingAttempts)\n} into this0\nselect new {\n\tthis0 = this0,\n\tedited = this0.rec.Headers[\"ServiceControl.EditOf\"] != null\n} into this1\nselect new {\n\tId = this1.this0.failure.UniqueMessageId,\n\tMessageType = this1.this0.rec.MessageMetadata[\"MessageType\"],\n\tIsSystemMessage = ((bool)this1.this0.rec.MessageMetadata[\"IsSystemMessage\"]),\n\tSendingEndpoint = this1.this0.rec.MessageMetadata[\"SendingEndpoint\"],\n\tReceivingEndpoint = this1.this0.rec.MessageMetadata[\"ReceivingEndpoint\"],\n\tTimeSent = ((DateTime?)this1.this0.rec.MessageMetadata[\"TimeSent\"]),\n\tMessageId = this1.this0.rec.MessageMetadata[\"MessageId\"],\n\tException = this1.this0.rec.FailureDetails.Exception,\n\tQueueAddress = this1.this0.rec.FailureDetails.AddressOfFailingEndpoint,\n\tNumberOfProcessingAttempts = this1.this0.failure.ProcessingAttempts.Count,\n\tStatus = this1.this0.failure.Status,\n\tTimeOfFailure = this1.this0.rec.FailureDetails.TimeOfFailure,\n\tLastModified = this1.this0.failure[\"@metadata\"][\"Last-Modified\"].Value<DateTime>(),\n\tEdited = this1.edited,\n\tEditOf = this1.edited ? this1.this0.rec.Headers[\"ServiceControl.EditOf\"] : \"\"\n}",
+  "TransfomerId": 2,
+  "Temporary": false,
+  "Name": "FailedMessageViewTransformer",
+  "LockMode": "Unlock",
+  "TransformerVersion": 1
+}

@@ -1,0 +1,8 @@
+{
+  "TransformResults": "from message in results\nselect new {\n\tmessage = message,\n\tmetadata = message.ProcessingAttempts != null ? (DynamicEnumerable.LastOrDefault(message.ProcessingAttempts)).MessageMetadata : message.MessageMetadata\n} into this0\nselect new {\n\tthis0 = this0,\n\tbody = this0.message.ProcessingAttempts != null ? ((object)((DynamicEnumerable.LastOrDefault(this0.message.ProcessingAttempts)).Body ?? this0.metadata[\"Body\"])) : this0.metadata[\"Body\"]\n} into this1\nselect new {\n\tMessageId = this1.this0.metadata[\"MessageId\"],\n\tBody = this1.body,\n\tBodySize = ((int)this1.this0.metadata[\"ContentLength\"]),\n\tContentType = this1.this0.metadata[\"ContentType\"],\n\tBodyNotStored = ((bool)this1.this0.metadata[\"BodyNotStored\"])\n}",
+  "TransfomerId": 3,
+  "Temporary": false,
+  "Name": "MessagesBodyTransformer",
+  "LockMode": "Unlock",
+  "TransformerVersion": 1
+}

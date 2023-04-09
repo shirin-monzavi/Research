@@ -1,0 +1,30 @@
+{
+  "IndexId": 12,
+  "Name": "QueueAddressIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from message in docs.FailedMessages\nselect new {\n\tmessage = message,\n\tprocessingAttemptsLast = DynamicEnumerable.LastOrDefault(message.ProcessingAttempts)\n} into this0\nselect new {\n\tPhysicalAddress = this0.processingAttemptsLast.FailureDetails.AddressOfFailingEndpoint,\n\tFailedMessageCount = 1\n}",
+  "Maps": [
+    "from message in docs.FailedMessages\nselect new {\n\tmessage = message,\n\tprocessingAttemptsLast = DynamicEnumerable.LastOrDefault(message.ProcessingAttempts)\n} into this0\nselect new {\n\tPhysicalAddress = this0.processingAttemptsLast.FailureDetails.AddressOfFailingEndpoint,\n\tFailedMessageCount = 1\n}"
+  ],
+  "Reduce": "from result in results\ngroup result by result.PhysicalAddress into g\nselect new {\n\tPhysicalAddress = g.Key,\n\tFailedMessageCount = Enumerable.Sum(g, m => ((int)m.FailedMessageCount))\n}",
+  "IsMapReduce": true,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "FailedMessageCount": "Int"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "MapReduce",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

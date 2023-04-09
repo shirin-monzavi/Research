@@ -1,0 +1,28 @@
+{
+  "IndexId": 6,
+  "Name": "FailedMessageRetries/ByBatch",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from doc in docs.FailedMessageRetries\nselect new {\n\tRetryBatchId = doc.RetryBatchId\n}",
+  "Maps": [
+    "from doc in docs.FailedMessageRetries\nselect new {\n\tRetryBatchId = doc.RetryBatchId\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

@@ -1,0 +1,28 @@
+{
+  "IndexId": 5,
+  "Name": "GroupCommentIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from gc in docs.GroupComments\nselect new {\n\tId = gc.__document_id,\n\tComment = gc.Comment\n}",
+  "Maps": [
+    "from gc in docs.GroupComments\nselect new {\n\tId = gc.__document_id,\n\tComment = gc.Comment\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

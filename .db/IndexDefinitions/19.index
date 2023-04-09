@@ -1,0 +1,33 @@
+{
+  "IndexId": 19,
+  "Name": "MessagesViewIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from message in docs.ProcessedMessages\nselect new {\n\tMessageId = ((string)message.MessageMetadata[\"MessageId\"]),\n\tMessageType = ((string)message.MessageMetadata[\"MessageType\"]),\n\tIsSystemMessage = ((bool)message.MessageMetadata[\"IsSystemMessage\"]),\n\tStatus = ((bool)message.MessageMetadata[\"IsRetried\"]) ? 4 : 3,\n\tTimeSent = ((DateTime)message.MessageMetadata[\"TimeSent\"]),\n\tProcessedAt = message.ProcessedAt,\n\tReceivingEndpointName = ((message.MessageMetadata[\"ReceivingEndpoint\"])).Name,\n\tCriticalTime = ((TimeSpan?)message.MessageMetadata[\"CriticalTime\"]),\n\tProcessingTime = ((TimeSpan?)message.MessageMetadata[\"ProcessingTime\"]),\n\tDeliveryTime = ((TimeSpan?)message.MessageMetadata[\"DeliveryTime\"]),\n\tQuery = Enumerable.ToArray(DynamicEnumerable.Union(message.MessageMetadata.Select(_ => _.Value.ToString()), new string[] {\n\t\tString.Join(\" \", message.Headers.Select(x => x.Value))\n\t})),\n\tConversationId = ((string)message.MessageMetadata[\"ConversationId\"])\n}",
+  "Maps": [
+    "from message in docs.ProcessedMessages\nselect new {\n\tMessageId = ((string)message.MessageMetadata[\"MessageId\"]),\n\tMessageType = ((string)message.MessageMetadata[\"MessageType\"]),\n\tIsSystemMessage = ((bool)message.MessageMetadata[\"IsSystemMessage\"]),\n\tStatus = ((bool)message.MessageMetadata[\"IsRetried\"]) ? 4 : 3,\n\tTimeSent = ((DateTime)message.MessageMetadata[\"TimeSent\"]),\n\tProcessedAt = message.ProcessedAt,\n\tReceivingEndpointName = ((message.MessageMetadata[\"ReceivingEndpoint\"])).Name,\n\tCriticalTime = ((TimeSpan?)message.MessageMetadata[\"CriticalTime\"]),\n\tProcessingTime = ((TimeSpan?)message.MessageMetadata[\"ProcessingTime\"]),\n\tDeliveryTime = ((TimeSpan?)message.MessageMetadata[\"DeliveryTime\"]),\n\tQuery = Enumerable.ToArray(DynamicEnumerable.Union(message.MessageMetadata.Select(_ => _.Value.ToString()), new string[] {\n\t\tString.Join(\" \", message.Headers.Select(x => x.Value))\n\t})),\n\tConversationId = ((string)message.MessageMetadata[\"ConversationId\"])\n}",
+    "from message in docs.FailedMessages\nselect new {\n\tmessage = message,\n\tlast = DynamicEnumerable.LastOrDefault(message.ProcessingAttempts)\n} into this0\nselect new {\n\tMessageId = this0.last.MessageId,\n\tMessageType = ((string)this0.last.MessageMetadata[\"MessageType\"]),\n\tIsSystemMessage = ((bool)this0.last.MessageMetadata[\"IsSystemMessage\"]),\n\tStatus = this0.message.Status == 4 ? 5 : (this0.message.Status == 2 ? 4 : (this0.message.ProcessingAttempts.Count == 1 ? 1 : 2)),\n\tTimeSent = ((DateTime)this0.last.MessageMetadata[\"TimeSent\"]),\n\tProcessedAt = this0.last.AttemptedAt,\n\tReceivingEndpointName = ((this0.last.MessageMetadata[\"ReceivingEndpoint\"])).Name,\n\tCriticalTime = (object)null,\n\tProcessingTime = (object)null,\n\tDeliveryTime = (object)null,\n\tQuery = Enumerable.ToArray(DynamicEnumerable.Union(this0.last.MessageMetadata.Select(_ => _.Value.ToString()), new string[] {\n\t\tString.Join(\" \", this0.last.Headers.Select(x => x.Value))\n\t})),\n\tConversationId = ((string)this0.last.MessageMetadata[\"ConversationId\"])\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {
+    "Query": "Analyzed"
+  },
+  "SortOptions": {},
+  "Analyzers": {
+    "Query": "Lucene.Net.Analysis.Standard.StandardAnalyzer, Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181"
+  },
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

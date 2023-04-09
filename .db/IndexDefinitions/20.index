@@ -1,0 +1,29 @@
+{
+  "IndexId": 20,
+  "Name": "ExpirySagaAuditIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from message in docs.SagaSnapshots\nselect new {\n\tLastModified = (message[\"@metadata\"].Value<DateTime>(\"Last-Modified\")).Ticks\n}",
+  "Maps": [
+    "from message in docs.SagaSnapshots\nselect new {\n\tLastModified = (message[\"@metadata\"].Value<DateTime>(\"Last-Modified\")).Ticks\n}",
+    "from sagaHistory in docs.SagaHistories\nselect new {\n\tLastModified = (sagaHistory[\"@metadata\"].Value<DateTime>(\"Last-Modified\")).Ticks\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

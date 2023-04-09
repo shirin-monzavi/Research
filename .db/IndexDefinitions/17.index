@@ -1,0 +1,30 @@
+{
+  "IndexId": 17,
+  "Name": "ExpiryProcessedMessageIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from message in docs.ProcessedMessages\nselect new {\n\tProcessedAt = message.ProcessedAt.Ticks\n}",
+  "Maps": [
+    "from message in docs.ProcessedMessages\nselect new {\n\tProcessedAt = message.ProcessedAt.Ticks\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "ProcessedAt": "Long"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

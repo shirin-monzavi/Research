@@ -1,0 +1,29 @@
+{
+  "IndexId": 1,
+  "Name": "SagaListIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from doc in docs.SagaSnapshots\nselect new {\n\tId = doc.SagaId,\n\tUri = \"api/sagas/\" + doc.SagaId,\n\tSagaType = doc.SagaType\n}",
+  "Maps": [
+    "from doc in docs.SagaSnapshots\nselect new {\n\tId = doc.SagaId,\n\tUri = \"api/sagas/\" + doc.SagaId,\n\tSagaType = doc.SagaType\n}",
+    "from doc in docs.SagaHistories\nselect new {\n\tId = doc.SagaId,\n\tUri = \"api/sagas/\" + doc.SagaId,\n\tSagaType = doc.SagaType\n}"
+  ],
+  "Reduce": "from result in results\ngroup result by result.Id into g\nselect new {\n\tg = g,\n\tfirst = DynamicEnumerable.FirstOrDefault(g)\n} into this0\nselect new {\n\tId = this0.g.Key,\n\tUri = this0.first.Uri,\n\tSagaType = this0.first.SagaType\n}",
+  "IsMapReduce": true,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "MapReduce",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

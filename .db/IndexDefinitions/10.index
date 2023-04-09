@@ -1,0 +1,32 @@
+{
+  "IndexId": 10,
+  "Name": "FailedMessageFacetsIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from failure in docs.FailedMessages\nwhere failure.Status == 1\nselect new {\n\tfailure = failure,\n\tt = ((DynamicEnumerable.LastOrDefault(failure.ProcessingAttempts)).MessageMetadata[\"ReceivingEndpoint\"])\n} into this0\nselect new {\n\tName = this0.t.Name,\n\tHost = this0.t.Host,\n\tMessageType = (DynamicEnumerable.LastOrDefault(this0.failure.ProcessingAttempts)).MessageMetadata[\"MessageType\"]\n}",
+  "Maps": [
+    "from failure in docs.FailedMessages\nwhere failure.Status == 1\nselect new {\n\tfailure = failure,\n\tt = ((DynamicEnumerable.LastOrDefault(failure.ProcessingAttempts)).MessageMetadata[\"ReceivingEndpoint\"])\n} into this0\nselect new {\n\tName = this0.t.Name,\n\tHost = this0.t.Host,\n\tMessageType = (DynamicEnumerable.LastOrDefault(this0.failure.ProcessingAttempts)).MessageMetadata[\"MessageType\"]\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {
+    "Name": "NotAnalyzed",
+    "Host": "NotAnalyzed",
+    "MessageType": "NotAnalyzed"
+  },
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

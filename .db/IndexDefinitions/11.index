@@ -1,0 +1,30 @@
+{
+  "IndexId": 11,
+  "Name": "FailedMessageViewIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from message in docs.FailedMessages\nselect new {\n\tmessage = message,\n\tprocessingAttemptsLast = DynamicEnumerable.LastOrDefault(message.ProcessingAttempts)\n} into this0\nselect new {\n\tMessageId = this0.processingAttemptsLast.MessageMetadata[\"MessageId\"],\n\tMessageType = this0.processingAttemptsLast.MessageMetadata[\"MessageType\"],\n\tStatus = this0.message.Status,\n\tTimeSent = ((DateTime)this0.processingAttemptsLast.MessageMetadata[\"TimeSent\"]),\n\tReceivingEndpointName = ((this0.processingAttemptsLast.MessageMetadata[\"ReceivingEndpoint\"])).Name,\n\tQueueAddress = this0.processingAttemptsLast.FailureDetails.AddressOfFailingEndpoint,\n\tTimeOfFailure = this0.processingAttemptsLast.FailureDetails.TimeOfFailure,\n\tLastModified = (this0.message[\"@metadata\"].Value<DateTime>(\"Last-Modified\")).Ticks\n}",
+  "Maps": [
+    "from message in docs.FailedMessages\nselect new {\n\tmessage = message,\n\tprocessingAttemptsLast = DynamicEnumerable.LastOrDefault(message.ProcessingAttempts)\n} into this0\nselect new {\n\tMessageId = this0.processingAttemptsLast.MessageMetadata[\"MessageId\"],\n\tMessageType = this0.processingAttemptsLast.MessageMetadata[\"MessageType\"],\n\tStatus = this0.message.Status,\n\tTimeSent = ((DateTime)this0.processingAttemptsLast.MessageMetadata[\"TimeSent\"]),\n\tReceivingEndpointName = ((this0.processingAttemptsLast.MessageMetadata[\"ReceivingEndpoint\"])).Name,\n\tQueueAddress = this0.processingAttemptsLast.FailureDetails.AddressOfFailingEndpoint,\n\tTimeOfFailure = this0.processingAttemptsLast.FailureDetails.TimeOfFailure,\n\tLastModified = (this0.message[\"@metadata\"].Value<DateTime>(\"Last-Modified\")).Ticks\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "LastModified": "Long"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

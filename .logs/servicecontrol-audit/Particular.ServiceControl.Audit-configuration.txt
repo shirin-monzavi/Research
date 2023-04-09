@@ -1,0 +1,1193 @@
+{
+  "AssemblyScanning": {
+    "Assemblies": [
+      {
+        "FullName": "NServiceBus.Core, Version=7.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c",
+        "FileVersion": "7.8.2"
+      },
+      {
+        "FullName": "ServiceControl.Audit, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "FileVersion": "4.29.3"
+      },
+      {
+        "FullName": "NServiceBus.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c",
+        "FileVersion": "1.0.0"
+      },
+      {
+        "FullName": "ServiceControl.Transports.Learning, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "FileVersion": "4.29.3"
+      },
+      {
+        "FullName": "ServiceControl.Transports, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "FileVersion": "4.29.3"
+      },
+      {
+        "FullName": "NServiceBus.Raw, Version=3.0.0.0, Culture=neutral, PublicKeyToken=215652b07edbd86c",
+        "FileVersion": "3.2.5"
+      },
+      {
+        "FullName": "ServiceControl.Audit.Persistence, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "FileVersion": "4.29.3"
+      },
+      {
+        "FullName": "NServiceBus.Extensions.Hosting, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c",
+        "FileVersion": "1.1.0"
+      },
+      {
+        "FullName": "ServiceControl.Audit.Persistence.InMemory, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "FileVersion": "4.29.3"
+      },
+      {
+        "FullName": "NServiceBus.CustomChecks, Version=3.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c",
+        "FileVersion": "3.0.1"
+      },
+      {
+        "FullName": "NServiceBus.Newtonsoft.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c",
+        "FileVersion": "2.4.0"
+      },
+      {
+        "FullName": "NServiceBus.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9fc386479f8a226c",
+        "FileVersion": "1.1.0"
+      }
+    ],
+    "ErrorsThrownDuringScanning": false,
+    "SkippedFiles": [
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Bcl.AsyncInterfaces.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Configuration.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Configuration.Binder.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Configuration.CommandLine.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Configuration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Configuration.FileExtensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Configuration.Json.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Configuration.UserSecrets.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.DependencyInjection.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.FileProviders.Physical.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.FileSystemGlobbing.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Hosting.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Hosting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Hosting.WindowsServices.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Logging.Abstractions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Logging.Configuration.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Logging.Console.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Logging.Debug.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Logging.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Logging.EventLog.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Logging.EventSource.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Options.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Extensions.Primitives.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.IO.RecyclableMemoryStream.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Owin.Cors.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Owin.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Owin.Host.HttpListener.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Microsoft.Owin.Hosting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\Newtonsoft.Json.dll",
+        "SkipReason": "File was explicitly excluded from scanning."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\NLog.dll",
+        "SkipReason": "File was explicitly excluded from scanning."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Buffers.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Diagnostics.DiagnosticSource.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Memory.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Net.Http.Formatting.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Numerics.Vectors.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Runtime.CompilerServices.Unsafe.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Security.Cryptography.Xml.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Text.Encodings.Web.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Text.Json.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Threading.Channels.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Threading.Tasks.Extensions.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.ValueTuple.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Web.Cors.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Web.Http.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Web.Http.Owin.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      },
+      {
+        "FilePath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\System.Web.Http.WebHost.dll",
+        "SkipReason": "File is a .NET runtime assembly."
+      }
+    ],
+    "Settings": {
+      "ScanAppDomainAssemblies": true,
+      "ScanFileSystemAssemblies": true,
+      "ThrowExceptions": true,
+      "ScanAssembliesInNestedDirectories": false,
+      "AdditionalAssemblyScanningPath": null
+    }
+  },
+  "Container": {
+    "Type": "external"
+  },
+  "Endpoint": {
+    "Name": "Particular.ServiceControl.Audit",
+    "SendOnly": true,
+    "NServiceBusVersion": "7.8.2"
+  },
+  "Features": [
+    {
+      "Name": "NServiceBus.Recoverability",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "Message recoverability is only relevant for endpoints receiving messages."
+        ]
+      },
+      "Dependencies": [
+        [
+          "NServiceBus.Features.RootFeature",
+          "NServiceBus.Features.DelayedDeliveryFeature"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.HostStartupDiagnostics",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.ReceiveFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Sending",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.StorageInitializer",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.ReceiveStatisticsFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.InMemoryTransactionalStorageFeature",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.SerializationFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.StaticHeaders",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "No static outgoing headers registered"
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.Audit",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "No configured audit queue was found"
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.MessageCausation",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.MessageCorrelation",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.CustomIDataBus",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.DataBus"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.DataBus",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.DataBusFileBased",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.DataBus"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.DelayedDeliveryFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        [
+          "NServiceBus.Features.RootFeature",
+          "NServiceBus.Features.TimeoutManager"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.TimeoutManager",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "Send only endpoints can't use the timeoutmanager since it requires receive capabilities",
+          "The selected transport supports delayed delivery natively"
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.RootFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.ForwardReceivedMessages",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "No forwarding address was defined in the UnicastBus config"
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.LicenseReminder",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.Mutators",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.HostInformationFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.RegisterHandlersInOrder",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.OutgoingPipelineFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.ReplyAddressFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.MessageDurabilityFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.TimeToBeReceived",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.InMemoryGatewayPersistence",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.Gateway"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.InMemoryOutboxPersistence",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.Outbox"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.InMemorySagaPersistence",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.Sagas"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.InMemorySubscriptionPersistence",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.MessageDrivenSubscriptions"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.InMemoryTimeoutPersistence",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.TimeoutManager"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.LearningSagaPersistence",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.Sagas"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.Outbox",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.SynchronizedStorage"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.SynchronizedStorage",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.AutoSubscribe",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "Send only endpoints can't autosubscribe."
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.InferredMessageTypeEnricherFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.MessageDrivenSubscriptions",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "The transport supports native pub sub"
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.NativePublishSubscribeFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.SubscriptionMigrationMode",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "The transport has not enabled subscription migration mode"
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.AutoCorrelationFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.Sagas",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        [
+          "NServiceBus.Features.SynchronizedStorage"
+        ]
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "NServiceBus.Features.Scheduler",
+      "EnabledByDefault": true,
+      "Active": false,
+      "PrerequisiteStatus": {
+        "IsSatisfied": false,
+        "Reasons": [
+          "Scheduler cannot be used from a sendonly endpoint"
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.PlatformRetryNotifications",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.Features.TransactionScopeUnitOfWork",
+      "EnabledByDefault": false,
+      "Active": false,
+      "PrerequisiteStatus": null,
+      "Dependencies": [
+        
+      ],
+      "Version": "7.8.2",
+      "StartupTasks": null,
+      "DependenciesAreMet": false
+    },
+    {
+      "Name": "ServiceControl.Audit.Infrastructure.Settings.DeprecatedConfigurationCheckFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "4.29.3",
+      "StartupTasks": [
+        "DeprecatedConfigurationCheck"
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "ServiceControl.Audit.Infrastructure.Plugins.RegisterPluginMessagesFeature",
+      "EnabledByDefault": true,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "4.29.3",
+      "StartupTasks": [
+        
+      ],
+      "DependenciesAreMet": true
+    },
+    {
+      "Name": "NServiceBus.CustomChecks.CustomChecksFeature",
+      "EnabledByDefault": false,
+      "Active": true,
+      "PrerequisiteStatus": {
+        "IsSatisfied": true,
+        "Reasons": [
+          
+        ]
+      },
+      "Dependencies": [
+        
+      ],
+      "Version": "3.0.1",
+      "StartupTasks": [
+        "CustomChecksStartup"
+      ],
+      "DependenciesAreMet": true
+    }
+  ],
+  "Hosting": {
+    "HostId": "af153f52-2a4a-727d-db19-b38ecfffa593",
+    "HostDisplayName": "DESKTOP-PP7HBIF",
+    "MachineName": "DESKTOP-PP7HBIF",
+    "OSPlatform": 2,
+    "OSVersion": "Microsoft Windows NT 6.2.9200.0",
+    "IsServerGC": true,
+    "GCLatencyMode": 1,
+    "ProcessorCount": 4,
+    "Is64BitProcess": true,
+    "CLRVersion": {
+      "Major": 4,
+      "Minor": 0,
+      "Build": 30319,
+      "Revision": 42000,
+      "MajorRevision": 0,
+      "MinorRevision": -23536
+    },
+    "WorkingSet": 47181824,
+    "SystemPageSize": 4096,
+    "HostName": "DESKTOP-PP7HBIF",
+    "UserName": "S.monzavi",
+    "PathToExe": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\Platform\\bin\\Debug\\net6.0\\platform\\servicecontrol\\servicecontrol-audit-instance\\ServiceControl.Audit.exe"
+  },
+  "Licensing": {
+    "RegisteredTo": null,
+    "LicenseType": "Trial",
+    "Edition": null,
+    "Tier": null,
+    "LicenseStatus": 2,
+    "LicenseLocation": "Trial License",
+    "ValidApplications": "All",
+    "CommercialLicense": false,
+    "IsExpired": false,
+    "ExpirationDate": "2023-04-11T00:00:00.0000000",
+    "UpgradeProtectionExpirationDate": null
+  },
+  "Messages": {
+    "CustomConventionUsed": true,
+    "MessageConventions": [
+      "Modified NServiceBus Marker Interfaces"
+    ],
+    "NumberOfMessagesFoundAtStartup": 5,
+    "Messages": [
+      "ServiceControl.EndpointPlugin.Messages.SagaState.SagaUpdatedMessage",
+      "ServiceControl.Contracts.EndpointControl.RegisterNewEndpoint",
+      "ServiceControl.EndpointPlugin.Messages.SagaState.SagaChangeInitiator",
+      "ServiceControl.EndpointPlugin.Messages.SagaState.SagaChangeOutput",
+      "ServiceControl.Contracts.MessageFailures.MarkMessageFailureResolvedByRetry"
+    ]
+  },
+  "Serialization": {
+    "DefaultSerializer": {
+      "Type": "NServiceBus.NewtonsoftJsonSerializer",
+      "Version": "2.4.0",
+      "ContentType": "application/json"
+    },
+    "AdditionalDeserializers": [
+      
+    ],
+    "AllowMessageTypeInference": true,
+    "AllowDynamicTypeLoading": true
+  },
+  "Startup": {
+    "Settings": {
+      "ApiUrl": "http://localhost:49201/api",
+      "AuditLogQueue": "audit.log",
+      "AuditQueue": "audit",
+      "DataSpaceRemainingThreshold": 20,
+      "ForwardAuditMessages": false,
+      "HttpDefaultConnectionLimit": 100,
+      "IngestAuditMessages": true,
+      "MaxBodySizeToStore": 102400,
+      "MaximumConcurrencyLevel": 32,
+      "Port": 49201,
+      "SkipQueueCreation": false,
+      "EnableFullTextSearchOnBodies": true,
+      "TransportCustomizationType": "ServiceControl.Transports.Learning.LearningTransportCustomization, ServiceControl.Transports.Learning"
+    },
+    "LoggingSettings": {
+      "LoggingLevel": {
+        "Name": "Info",
+        "Ordinal": 2
+      },
+      "RavenDBLogLevel": {
+        "Name": "Warn",
+        "Ordinal": 3
+      },
+      "LogPath": "C:\\Users\\S.monzavi\\source\\repos\\TibaResearch\\.logs\\servicecontrol-audit",
+      "LogToConsole": true
+    }
+  },
+  "Transport": {
+    "Type": "NServiceBus.LearningTransportInfrastructure",
+    "Version": "7.8.2"
+  }
+}

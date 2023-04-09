@@ -1,0 +1,8 @@
+{
+  "TransformResults": "from failedMessage in results\nselect new {\n\tUniqueMessageId = failedMessage.UniqueMessageId,\n\tLatestTimeOfFailure = DynamicEnumerable.Max(failedMessage.ProcessingAttempts, x => ((DateTime)x.FailureDetails.TimeOfFailure))\n}",
+  "TransfomerId": 1,
+  "Temporary": false,
+  "Name": "FailedMessages/UniqueMessageIdAndTimeOfFailures",
+  "LockMode": "Unlock",
+  "TransformerVersion": 1
+}

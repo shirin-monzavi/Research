@@ -1,0 +1,30 @@
+{
+  "IndexId": 8,
+  "Name": "RetryBatches/ByStatus/ReduceInitialBatchSize",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from doc in docs.RetryBatches\nselect new {\n\tRequestId = doc.RequestId,\n\tRetryType = doc.RetryType,\n\tHasStagingBatches = doc.Status == 2,\n\tHasForwardingBatches = doc.Status == 3,\n\tInitialBatchSize = doc.InitialBatchSize,\n\tOriginator = doc.Originator,\n\tClassifier = doc.Classifier,\n\tStartTime = doc.StartTime,\n\tLast = doc.Last\n}",
+  "Maps": [
+    "from doc in docs.RetryBatches\nselect new {\n\tRequestId = doc.RequestId,\n\tRetryType = doc.RetryType,\n\tHasStagingBatches = doc.Status == 2,\n\tHasForwardingBatches = doc.Status == 3,\n\tInitialBatchSize = doc.InitialBatchSize,\n\tOriginator = doc.Originator,\n\tClassifier = doc.Classifier,\n\tStartTime = doc.StartTime,\n\tLast = doc.Last\n}"
+  ],
+  "Reduce": "from result in results\ngroup result by new {\n\tRequestId = result.RequestId,\n\tRetryType = result.RetryType\n} into g\nselect new {\n\tRequestId = g.Key.RequestId,\n\tRetryType = g.Key.RetryType,\n\tOriginator = (DynamicEnumerable.FirstOrDefault(g)).Originator,\n\tHasStagingBatches = Enumerable.Any(g, x => x.HasStagingBatches),\n\tHasForwardingBatches = Enumerable.Any(g, x0 => x0.HasForwardingBatches),\n\tInitialBatchSize = Enumerable.Sum(g, x1 => ((int)x1.InitialBatchSize)),\n\tStartTime = (DynamicEnumerable.FirstOrDefault(g)).StartTime,\n\tLast = DynamicEnumerable.Max(g, x2 => ((DateTime)x2.Last)),\n\tClassifier = (DynamicEnumerable.FirstOrDefault(g)).Classifier\n}",
+  "IsMapReduce": true,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "InitialBatchSize": "Int"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "MapReduce",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

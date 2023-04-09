@@ -1,0 +1,32 @@
+{
+  "IndexId": 3,
+  "Name": "FailedMessages/ByGroup",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from doc in docs.FailedMessages\nselect new {\n\tdoc = doc,\n\tprocessingAttemptsLast = DynamicEnumerable.LastOrDefault(doc.ProcessingAttempts)\n} into this0\nfrom failureGroup in this0.doc.FailureGroups\nselect new {\n\tId = this0.doc.__document_id,\n\tMessageId = this0.doc.UniqueMessageId,\n\tFailureGroupId = failureGroup.Id,\n\tFailureGroupName = failureGroup.Title,\n\tStatus = this0.doc.Status,\n\tMessageType = ((string)this0.processingAttemptsLast.MessageMetadata[\"MessageType\"]),\n\tTimeSent = ((DateTime)this0.processingAttemptsLast.MessageMetadata[\"TimeSent\"]),\n\tTimeOfFailure = this0.processingAttemptsLast.FailureDetails.TimeOfFailure,\n\tLastModified = (this0.doc[\"@metadata\"].Value<DateTime>(\"Last-Modified\")).Ticks\n}",
+  "Maps": [
+    "from doc in docs.FailedMessages\nselect new {\n\tdoc = doc,\n\tprocessingAttemptsLast = DynamicEnumerable.LastOrDefault(doc.ProcessingAttempts)\n} into this0\nfrom failureGroup in this0.doc.FailureGroups\nselect new {\n\tId = this0.doc.__document_id,\n\tMessageId = this0.doc.UniqueMessageId,\n\tFailureGroupId = failureGroup.Id,\n\tFailureGroupName = failureGroup.Title,\n\tStatus = this0.doc.Status,\n\tMessageType = ((string)this0.processingAttemptsLast.MessageMetadata[\"MessageType\"]),\n\tTimeSent = ((DateTime)this0.processingAttemptsLast.MessageMetadata[\"TimeSent\"]),\n\tTimeOfFailure = this0.processingAttemptsLast.FailureDetails.TimeOfFailure,\n\tLastModified = (this0.doc[\"@metadata\"].Value<DateTime>(\"Last-Modified\")).Ticks\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {
+    "__all_fields": "Yes"
+  },
+  "Indexes": {},
+  "SortOptions": {
+    "LastModified": "Long"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

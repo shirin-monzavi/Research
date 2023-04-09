@@ -1,0 +1,30 @@
+{
+  "IndexId": 2,
+  "Name": "ArchivedGroupsViewIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from doc in docs.FailedMessages\nwhere doc.Status == 4\nselect new {\n\tdoc = doc,\n\tfailureTimes = doc.ProcessingAttempts.Select(x => x.FailureDetails.TimeOfFailure)\n} into this0\nfrom failureGroup in this0.doc.FailureGroups\nselect new {\n\tId = failureGroup.Id,\n\tTitle = failureGroup.Title,\n\tCount = 1,\n\tFirst = DynamicEnumerable.Min(this0.failureTimes),\n\tLast = DynamicEnumerable.Max(this0.failureTimes),\n\tType = failureGroup.Type\n}",
+  "Maps": [
+    "from doc in docs.FailedMessages\nwhere doc.Status == 4\nselect new {\n\tdoc = doc,\n\tfailureTimes = doc.ProcessingAttempts.Select(x => x.FailureDetails.TimeOfFailure)\n} into this0\nfrom failureGroup in this0.doc.FailureGroups\nselect new {\n\tId = failureGroup.Id,\n\tTitle = failureGroup.Title,\n\tCount = 1,\n\tFirst = DynamicEnumerable.Min(this0.failureTimes),\n\tLast = DynamicEnumerable.Max(this0.failureTimes),\n\tType = failureGroup.Type\n}"
+  ],
+  "Reduce": "from result in results\ngroup result by new {\n\tId = result.Id,\n\tTitle = result.Title,\n\tType = result.Type\n} into g\nselect new {\n\tId = g.Key.Id,\n\tTitle = g.Key.Title,\n\tCount = Enumerable.Sum(g, x => ((int)x.Count)),\n\tFirst = DynamicEnumerable.Min(g, x0 => ((DateTime)x0.First)),\n\tLast = DynamicEnumerable.Max(g, x1 => ((DateTime)x1.Last)),\n\tType = g.Key.Type\n}",
+  "IsMapReduce": true,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "Count": "Int"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "MapReduce",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

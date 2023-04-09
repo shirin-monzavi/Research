@@ -1,0 +1,32 @@
+{
+  "IndexId": 23,
+  "Name": "Auto/EventLogItems/ByRaisedAtSortByRaisedAt",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from doc in docs.EventLogItems\nselect new {\n\tRaisedAt = doc.RaisedAt\n}",
+  "Maps": [
+    "from doc in docs.EventLogItems\nselect new {\n\tRaisedAt = doc.RaisedAt\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "RaisedAt": "String"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {
+    "RaisedAt": "RaisedAt"
+  },
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Auto",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

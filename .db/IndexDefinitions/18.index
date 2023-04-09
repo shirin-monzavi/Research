@@ -1,0 +1,28 @@
+{
+  "IndexId": 18,
+  "Name": "CustomChecksIndex",
+  "LockMode": "Unlock",
+  "IndexVersion": 1,
+  "Map": "from cc in docs.CustomChecks\nselect new {\n\tStatus = cc.Status,\n\tReportedAt = cc.ReportedAt,\n\tCategory = cc.Category,\n\tCustomCheckId = cc.CustomCheckId\n}",
+  "Maps": [
+    "from cc in docs.CustomChecks\nselect new {\n\tStatus = cc.Status,\n\tReportedAt = cc.ReportedAt,\n\tCategory = cc.Category,\n\tCustomCheckId = cc.CustomCheckId\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": null,
+  "SuggestionsOptions": [],
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": true,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}
