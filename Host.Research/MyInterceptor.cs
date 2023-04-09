@@ -14,11 +14,7 @@ namespace HostSample
                 invocation.ReturnValue = ((Task)invocation.ReturnValue)
                .ContinueWith(task =>
                {
-                   var res = ((Task<int>)task).Result + 1;
-
-                   Console.WriteLine("DumpInterceptor Async return value is " + (invocation.ReturnValue ?? "NULL"));
-
-                   return res;
+                   return ((Task<int>)task).Result + 1;
                });
             }
             else if (invocation.Method.ReturnType == typeof(int))
@@ -27,14 +23,6 @@ namespace HostSample
 
                 Console.WriteLine("DumpInterceptor Sync return value is " + (invocation.ReturnValue ?? "NULL"));
             }
-        }
-
-        public static bool IsAsyncMethod(MethodInfo method)
-        {
-            return
-                method.ReturnType == typeof(Task) ||
-                method.ReturnType.IsGenericType && method.ReturnType.GetGenericTypeDefinition() == typeof(Task<>)
-                ;
         }
     }
 }
