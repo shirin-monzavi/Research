@@ -15,7 +15,7 @@ namespace HostSample
 
         public Task<int> DoAsync()
         {
-            return Task.Factory.StartNew(() => { return 1; });
+            return Task.Run(() => { return 1; });
         }
     }
 }

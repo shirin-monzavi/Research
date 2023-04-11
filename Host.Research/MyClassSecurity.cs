@@ -11,7 +11,7 @@ namespace HostSample
 
         public Task<int> DoWithSecurityAsync(User user)
         {
-            return Task.Factory.StartNew(() => { return 1; });
+            return Task.Run(() => { return 1; });
         }
     }
 }
