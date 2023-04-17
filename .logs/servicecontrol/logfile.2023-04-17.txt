@@ -1,0 +1,15 @@
+2023-04-17 10:22:25.9875|1|Info|ServiceBus.Management.Infrastructure.Settings.Settings|No settings found for error log queue to import, default name will be used
+2023-04-17 10:22:26.6109|1|Info|Particular.ServiceControl.Bootstrapper|
+-------------------------------------------------------------
+ServiceControl Version:             4.29.3+185657adcc17d5832d9c3093f55f019bd80862ec
+Audit Retention Period (optional):  
+Error Retention Period:             10.00:00:00
+Ingest Error Messages:              True
+Forwarding Error Messages:          False
+Database Size:                      1.05 MB
+Database Folder Size:               68.77 MB
+ServiceControl Logging Level:       Info
+RavenDB Logging Level:              Warn
+Selected Transport Customization:   ServiceControl.Transports.Learning.LearningTransportCustomization, ServiceControl.Transports.Learning
+-------------------------------------------------------------
+2023-04-17 10:22:27.3068|1|Info|ServiceControl.Infrastructure.RavenDB.RavenBootstrapper|Loading Embedded RavenDB license

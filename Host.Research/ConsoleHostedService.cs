@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace HostSample
@@ -12,6 +13,7 @@ namespace HostSample
         private readonly IServiceD _serviceD;
         private readonly IMyClass _myClass;
         private readonly IMyClassSecurity _myClassSecurity;
+        private readonly IConfiguration _configuration;
         public ConsoleHostedService(
             ILogger<ConsoleHostedService> logger,
             IHostApplicationLifetime appLifetime,
@@ -19,7 +21,8 @@ namespace HostSample
               IServiceC serviceC,
                IServiceD serviceD,
                IMyClass myClass,
-               IMyClassSecurity myClassSecurity
+               IMyClassSecurity myClassSecurity,
+               IConfiguration configuration
             )
         {
             _logger = logger;
@@ -29,6 +32,7 @@ namespace HostSample
             _serviceD = serviceD;
             _myClass = myClass;
             _myClassSecurity = myClassSecurity;
+            _configuration = configuration;
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
@@ -54,10 +58,11 @@ namespace HostSample
 
                         _logger.LogInformation($"App Started....");
 
-                    // Simulate real work is being done
-                    for (int i = 0; i < 4; i++)
+                        // Simulate real work is being done
+                        for (int i = 0; i < 50; i++)
                         {
-                            _logger.LogInformation($"Working {1} .....");
+                            _logger.LogWarning($"Working {1}.....");
+
                             await Task.Delay(1000);
                         }
 
@@ -68,8 +73,8 @@ namespace HostSample
                     }
                     finally
                     {
-                    // Stop the application once the work is done
-                    _appLifetime.StopApplication();
+                        // Stop the application once the work is done
+                        _appLifetime.StopApplication();
                         _appLifetime.ApplicationStopping.Register(() =>
                         {
                             _logger.LogInformation("Application is stopping");

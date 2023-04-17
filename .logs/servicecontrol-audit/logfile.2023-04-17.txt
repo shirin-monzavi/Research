@@ -1,0 +1,14 @@
+2023-04-17 10:22:26.2811|1|Info|LoggingConfiguration|Logging to C:\Users\S.monzavi\source\repos\TibaResearch\.logs\servicecontrol-audit\logfile.2023-04-17.txt with LogLevel 'Info'
+2023-04-17 10:22:26.5526|1|Info|ServiceControl.Audit.Infrastructure.Settings.Settings|No settings found for audit log queue to import, default name will be used
+2023-04-17 10:22:26.6532|1|Info|ServiceControl.Audit.Infrastructure.Bootstrapper|
+-------------------------------------------------------------
+ServiceControl Audit Version:       4.29.3+185657adcc17d5832d9c3093f55f019bd80862ec
+Audit Retention Period:             10.00:00:00
+Forwarding Audit Messages:          False
+Database Size:                       b
+Database Folder Size:                b
+ServiceControl Logging Level:       Info
+RavenDB Logging Level:              Warn
+Transport Customization:            ServiceControl.Transports.Learning.LearningTransportCustomization, ServiceControl.Transports.Learning,
+Persistence:                        InMemory
+-------------------------------------------------------------

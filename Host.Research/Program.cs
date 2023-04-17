@@ -7,6 +7,7 @@ using HostSample;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 class Program
 {
@@ -14,6 +15,7 @@ class Program
     {
 
         var builder = Host.CreateDefaultBuilder(args)
+
                  .UseServiceProviderFactory(new WindsorServiceProviderFactory())
                  .ConfigureContainer<WindsorContainer>((hostBuilderContext, container) =>
                  {
@@ -58,10 +60,17 @@ class Program
                  .ConfigureAppConfiguration((context, config) =>
                  {
                      config.SetBasePath(Directory.GetCurrentDirectory());
-                     config.AddJsonFile("hostsettings.json", optional: true);
+                     config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                     //config.AddJsonFile("myconfig.json", optional: false, reloadOnChange: true);
                      config.AddEnvironmentVariables(prefix: "PREFIX_");
                  })
+                 .ConfigureLogging((hostingContext, logging) =>
+                 {
+                     //logging.ClearProviders();
+                     //logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                 })
                  .UseConsoleLifetime();
+
 
         var app = builder.Build();
 
