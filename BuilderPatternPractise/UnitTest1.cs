@@ -146,5 +146,41 @@ namespace BuilderPatternPractise
             //assert
             Assert.Equal(1, target.Prop1);
         }
+
+        [Fact]
+        public void Test10()
+        {
+            //arrange
+            var sut = new TestTargetManager();
+
+
+            //act
+            var target = sut
+                .WithSomeProp()
+                .WithSomeOtherProp()
+                .targetManager.WithProp1(1)
+                .Build();
+
+            //assert
+            Assert.Equal(1, target.Prop1);
+            Assert.Equal(2, target.Prop2);
+        }
+
+        //[Fact]
+        //public void Test11()
+        //{
+        //    //arrange
+        //    var sut = new TestTargetManager();
+
+
+        //    //act
+        //    var target = sut.WithSomeProp()
+        //        .WithSomeOtherProp()
+        //        .Build();
+
+        //    //assert
+        //    Assert.Equal(1, target.Prop1);
+        //    Assert.Equal(2, target.Prop2);
+        //}
     }
 }
