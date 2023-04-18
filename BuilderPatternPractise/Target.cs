@@ -1,6 +1,6 @@
 ﻿namespace BuilderPatternPractise
 {
-    public class Target : ITargetOptions
+    public class Target : ITarget
     {
         public int Prop1 => prop1;
 

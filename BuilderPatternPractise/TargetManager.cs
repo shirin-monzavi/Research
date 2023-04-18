@@ -1,20 +1,24 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace BuilderPatternPractise
 {
-    public class TargetManager : TargetManager<TargetManager, Target>
+    public class TargetManager : TargetManager<ITargetManager, ITarget, Target>, ITargetManager
     {
-        public TargetManager(Target? target = null) : base(target)
+        public TargetManager(ITarget? target = null) : base(target)
         {
         }
     }
-    public abstract class TargetManager<TSelf, TTarget> : ITargetOptions
-        where TTarget : Target
-        where TSelf : TargetManager<TSelf, TTarget>
+    public abstract class TargetManager<TSelf, TITarget, TTarget> : ITargetManager<TSelf, TITarget>
+        where TSelf : ITargetManager<TSelf, TITarget>
+        where TITarget : class, ITarget
+        where TTarget : TITarget
     {
-        public TargetManager(TTarget? target = null)
+        private static ConcurrentDictionary<Type, MethodInfo> dic = new();
+        public TargetManager(TITarget? target = null)
         {
             if (target == null) return;
 
@@ -66,18 +70,24 @@ namespace BuilderPatternPractise
             return this;
         }
 
-        public TTarget Build()
+        public TITarget Build()
         {
-            return (TTarget)Activator.CreateInstance(typeof(TTarget), this)!;
+            return (TITarget)Activator.CreateInstance(typeof(TTarget), this)!;
         }
 
-        public void Update(TTarget target)
+        public void Update(TITarget target)
         {
-            var types = getInheritanceHierarchy(typeof(TTarget));
+            var methodInfo = dic.GetOrAdd(typeof(TITarget), getMethodInfo);
 
-            var findUpdateMethod = typeof(TTarget)
-                .GetMethods(System.Reflection.BindingFlags.Public |
-                System.Reflection.BindingFlags.Instance).
+            methodInfo.Invoke(target, new object[] { this });
+        }
+
+        private static MethodInfo getMethodInfo(Type optionTypes)
+        {
+            var types = getInheritanceHierarchy(typeof(TITarget));
+
+            var findUpdateMethod = typeof(TITarget)
+                .GetMethods(BindingFlags.Public | BindingFlags.Instance).
                    Where(x => x.Name == "Update");
 
             var methodInfo = types.Join(
@@ -85,8 +95,7 @@ namespace BuilderPatternPractise
                             mi => mi.DeclaringType.Name,
                             (t, mi) => mi)
                             .First();
-
-            methodInfo.Invoke(target, new object[] { this });
+            return methodInfo;
         }
 
         private static IEnumerable<Type> getInheritanceHierarchy(Type type)
@@ -97,9 +106,9 @@ namespace BuilderPatternPractise
             }
         }
 
-        public static implicit operator TSelf(TargetManager<TSelf, TTarget> manager)
+        public static implicit operator TSelf(TargetManager<TSelf, TITarget, TTarget> manager)
         {
-            return (TSelf)manager;
+            return (TSelf)(ITargetManager<TSelf, TITarget>)manager;
         }
     }
 }

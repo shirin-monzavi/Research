@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BuilderPatternPractise
+﻿namespace BuilderPatternPractise
 {
-    public class SubTarget : Target, ISubTargetOptions
+    public class SubTarget : Target, ISubTarget
     {
         public string Prop5 => prop5;
         private string prop5;

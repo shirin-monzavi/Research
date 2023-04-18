@@ -1,17 +1,22 @@
 ﻿namespace BuilderPatternPractise
 {
-    public class SubTargetManager : SubTargetManager<SubTargetManager, SubTarget>, ISubTargetOptions
+    public class SubTargetManager : SubTargetManager<ISubTargetManager, ISubTarget,SubTarget>, ISubTargetManager
     {
-        public SubTargetManager(SubTarget target = null) : base(target)
+        public SubTargetManager(ISubTarget target = null) : base(target)
         {
         }
+
     }
 
-    public abstract class SubTargetManager<TSelf, TTarget> : TargetManager<TSelf, TTarget>, ISubTargetOptions
-        where TSelf : SubTargetManager<TSelf, TTarget>
-        where TTarget : SubTarget
+    public abstract class SubTargetManager<TSelf, TITarget,TTarget> :
+        TargetManager<TSelf, TITarget, TTarget>,
+        ISubTargetManager<TSelf, TITarget>
+
+        where TSelf : ISubTargetManager<TSelf, TITarget>
+        where TITarget : class, ISubTarget
+        where TTarget : TITarget
     {
-        public SubTargetManager(TTarget? target=null):base(target)
+        public SubTargetManager(TITarget? target = null) : base(target)
         {
             if (target == null) return;
 

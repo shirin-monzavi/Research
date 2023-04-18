@@ -8,12 +8,12 @@ namespace BuilderPatternPractise
 {
     public interface ITargetOptions
     {
-        public int Prop1 { get; }
+        int Prop1 { get; }
 
-        public int Prop2 { get; }
+        int Prop2 { get; }
 
-        public string Prop3 { get; }
+        string Prop3 { get; }
 
-        public string Prop4 { get;  }
+        string Prop4 { get; }
     }
 }

@@ -1,3 +1,4 @@
+using NSubstitute;
 using Xunit;
 
 namespace BuilderPatternPractise
@@ -11,7 +12,9 @@ namespace BuilderPatternPractise
             var sut = new TargetManager();
 
             //act
-            var target = sut.WithProp1(1).WithProp2(2).Build();
+            var target = sut.WithProp1(1)
+                .WithProp2(2)
+                .Build();
 
             //assert
 
@@ -40,7 +43,7 @@ namespace BuilderPatternPractise
             var target = sut.WithProp1(1).WithProp2(2).Build();
 
             //act
-            new TargetManager(target)
+            new TargetManager(target as Target)
             .WithProp1(2)
             .Update(target)
             ;
@@ -65,6 +68,83 @@ namespace BuilderPatternPractise
 
             //assert
             Assert.Equal(2, target.Prop1);
+        }
+
+        [Fact]
+        public void Test5()
+        {
+            //arrange
+            var sut = Substitute.For<ITargetManager>();
+
+            //act
+            sut.WithProp1(1);
+
+            //assert
+            sut.Received(1).WithProp1(1);
+        }
+
+        [Fact]
+        public void Test6()
+        {
+            //arrange
+            var sut = Substitute.For<ITargetManager>();
+
+            sut.WithProp1(1).Returns(ci => sut);
+
+            //act
+            sut.WithProp1(1).Build();
+
+            //assert
+            sut.Received(1).WithProp1(1);
+            sut.Received(1).Build();
+        }
+
+        [Fact]
+        public void Test7()
+        {
+            //arrange
+            var sut = Substitute.For<ISubTargetManager>();
+
+            sut.WithProp5("test5").Returns(ci => sut);
+
+            //act
+            sut.WithProp5("test5").Build();
+
+            //assert
+            sut.Received(1).WithProp5("test5");
+            sut.Received(1).Build();
+        }
+
+
+        [Fact]
+        public void Test8()
+        {
+            //arrange
+            var sut = Substitute.For<ISubTargetManager>();
+
+            sut.WithProp5("test5").Returns(ci => sut);
+
+            //act
+            var subTarget = sut.WithProp5("test5").Build();
+
+            //assert
+            sut.Received(1).WithProp5("test5");
+            sut.Received(1).Build();
+        }
+
+
+        [Fact]
+        public void Test9()
+        {
+            //arrange
+            var sut = new SubTargetManager();
+
+
+            //act
+            var target = sut.WithProp1(1).WithProp2(2).Build();
+
+            //assert
+            Assert.Equal(1, target.Prop1);
         }
     }
 }
