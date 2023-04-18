@@ -158,12 +158,13 @@ namespace BuilderPatternPractise
             var target = sut
                 .WithSomeProp()
                 .WithSomeOtherProp()
-                .targetManager.WithProp1(1)
+                .targetManager.WithProp4("test4")
                 .Build();
 
             //assert
             Assert.Equal(1, target.Prop1);
             Assert.Equal(2, target.Prop2);
+            Assert.Equal("test4", target.Prop4);
         }
 
         //[Fact]

@@ -26,7 +26,7 @@ namespace BuilderPatternPractise
 
         public TSelf WithSomeProp()
         {
-            targetManager.WithProp1(1);
+            targetManager.WithProp1(1).WithProp2(2);
             return this;
         }
 

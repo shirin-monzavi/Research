@@ -77,12 +77,12 @@ namespace BuilderPatternPractise
 
         public void Update(TITarget target)
         {
-            var methodInfo = dic.GetOrAdd(typeof(TITarget), getMethodInfo);
+            var methodInfo = dic.GetOrAdd(typeof(TITarget), getMethodInfo());
 
             methodInfo.Invoke(target, new object[] { this });
         }
 
-        private static MethodInfo getMethodInfo(Type optionTypes)
+        private static MethodInfo getMethodInfo()
         {
             var types = getInheritanceHierarchy(typeof(TITarget));
 
