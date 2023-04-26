@@ -92,7 +92,7 @@ namespace BuilderPatternPractise
 
             var methodInfo = types.Join(
                             findUpdateMethod, t => t.Name,
-                            mi => mi.DeclaringType.Name,
+                            mi => mi.DeclaringType!.Name,
                             (t, mi) => mi)
                             .First();
             return methodInfo;

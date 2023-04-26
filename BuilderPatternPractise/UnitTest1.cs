@@ -5,6 +5,17 @@ namespace BuilderPatternPractise
 {
     public class UnitTest1
     {
+        private readonly ITargetManager _targetManager;
+
+        private readonly TargetManager targetManager;
+
+        public UnitTest1()
+        {
+            _targetManager = new TargetManager();
+
+            targetManager = new TargetManager();
+        }
+
         [Fact]
         public void Test1()
         {

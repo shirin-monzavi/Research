@@ -59,10 +59,36 @@ class Program
                  })
                  .ConfigureAppConfiguration((context, config) =>
                  {
+                     config.Sources.Clear();
                      config.SetBasePath(Directory.GetCurrentDirectory());
                      config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                     config.AddXmlFile("app.config", optional: false, reloadOnChange: true);
+
+
+                     var dic = new Dictionary<string, string>();
+                     dic.Add("key", "value1");
+
+                     config.AddInMemoryCollection(dic);
+
                      //config.AddJsonFile("myconfig.json", optional: false, reloadOnChange: true);
-                     config.AddEnvironmentVariables(prefix: "PREFIX_");
+
+                     Environment.SetEnvironmentVariable("PREFIX__TestKey", "TestValue");
+
+                     config.AddEnvironmentVariables("PREFIX__");
+
+                     Console.WriteLine(Environment.GetEnvironmentVariable("PREFIX__TestKey"));
+
+                     //Environment.SetEnvironmentVariable("MyVariable", "MyValue",EnvironmentVariableTarget.Machine);
+
+                     //Console.WriteLine(Environment.GetEnvironmentVariable("MyVariable"));
+                     //Console.WriteLine(Environment.GetEnvironmentVariable("OS"));
+                     var root = config.Build();
+
+                     var loadedValue = root.GetValue<string?>("TestKey", null);
+                     Console.WriteLine(Environment.GetEnvironmentVariable("OS"));
+                     Console.WriteLine(Environment.GetEnvironmentVariables());
+                     Console.WriteLine(loadedValue);
+
                  })
                  .ConfigureLogging((hostingContext, logging) =>
                  {

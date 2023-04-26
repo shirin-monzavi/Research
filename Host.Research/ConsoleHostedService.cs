@@ -37,7 +37,7 @@ namespace HostSample
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            _logger.LogDebug($"Starting with arguments: {string.Join(" ", Environment.GetCommandLineArgs())}");
+            //_logger.LogDebug($"Starting with arguments: {string.Join(" ", Environment.GetCommandLineArgs())}");
 
             _appLifetime.ApplicationStarted.Register(() =>
             {
@@ -61,9 +61,9 @@ namespace HostSample
                         // Simulate real work is being done
                         for (int i = 0; i < 50; i++)
                         {
-                            _logger.LogWarning($"Working {1}.....");
+                            _logger.LogInformation($"Working {i}.....");
 
-                            await Task.Delay(1000);
+                            await Task.Delay(TimeSpan.FromSeconds(1));
                         }
 
                     }
