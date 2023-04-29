@@ -47,7 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderPatternPractise", "B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PolymorphicModelBinderSample", "PolymorphicModelBinderSample", "{8368BDD8-2593-4E88-BF69-C3AEA06AF797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBinderPersonSample", "ModelBinderPersonSample\ModelBinderPersonSample.csproj", "{F9B04D0A-14A4-4C8B-BF29-D8596FD223C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelBinderPersonSample", "ModelBinderPersonSample\ModelBinderPersonSample.csproj", "{F9B04D0A-14A4-4C8B-BF29-D8596FD223C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorSample", "MonitorSample\MonitorSample.csproj", "{5FF631A4-EE01-42A3-ABB0-A3C260605136}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,10 @@ Global
 		{F9B04D0A-14A4-4C8B-BF29-D8596FD223C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9B04D0A-14A4-4C8B-BF29-D8596FD223C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9B04D0A-14A4-4C8B-BF29-D8596FD223C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF631A4-EE01-42A3-ABB0-A3C260605136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF631A4-EE01-42A3-ABB0-A3C260605136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF631A4-EE01-42A3-ABB0-A3C260605136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF631A4-EE01-42A3-ABB0-A3C260605136}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
