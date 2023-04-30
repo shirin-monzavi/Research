@@ -55,7 +55,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Concurrency", "Concurrency"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MutexSample", "MutexSample\MutexSample.csproj", "{F3F5A65A-091D-4314-946C-1CD4121FAA67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semaphore", "Semaphore\Semaphore.csproj", "{FD81B171-88BC-4C00-96AF-1230B994DCE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Semaphore", "Semaphore\Semaphore.csproj", "{FD81B171-88BC-4C00-96AF-1230B994DCE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemaphoreSlimSample", "SemaphoreSlimSample\SemaphoreSlimSample.csproj", "{CFF9A55F-99E9-465D-92FA-AF2A578999EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -139,6 +141,10 @@ Global
 		{FD81B171-88BC-4C00-96AF-1230B994DCE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD81B171-88BC-4C00-96AF-1230B994DCE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD81B171-88BC-4C00-96AF-1230B994DCE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF9A55F-99E9-465D-92FA-AF2A578999EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF9A55F-99E9-465D-92FA-AF2A578999EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF9A55F-99E9-465D-92FA-AF2A578999EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF9A55F-99E9-465D-92FA-AF2A578999EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,6 +169,7 @@ Global
 		{5FF631A4-EE01-42A3-ABB0-A3C260605136} = {C61F24F8-0F89-4DFF-BFCA-2F342C353B80}
 		{F3F5A65A-091D-4314-946C-1CD4121FAA67} = {C61F24F8-0F89-4DFF-BFCA-2F342C353B80}
 		{FD81B171-88BC-4C00-96AF-1230B994DCE5} = {C61F24F8-0F89-4DFF-BFCA-2F342C353B80}
+		{CFF9A55F-99E9-465D-92FA-AF2A578999EE} = {C61F24F8-0F89-4DFF-BFCA-2F342C353B80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86D6AF66-426B-4F67-82A7-FA37413B8044}
