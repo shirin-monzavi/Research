@@ -10,7 +10,7 @@ namespace DecoratorDesingPatternSample
     {
         public Espresso()
         {
-            desc = "Espresso";
+            Description = "Espresso";
         }
         public override double Cost()
         {

@@ -10,8 +10,7 @@ namespace DecoratorDesingPatternSample
     {
         public HouseBlend()
         {
-            //Description = "HouseBlend";
-            desc = "HouseBlend";
+            Description = "HouseBlend";
         }
         public override double Cost()
         {
