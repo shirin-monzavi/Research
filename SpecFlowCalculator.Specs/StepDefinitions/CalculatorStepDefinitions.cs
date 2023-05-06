@@ -45,7 +45,34 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
             _result.Should().Be(result);
         }
 
-    
+
+        [Given(@"I have entered (.*) into the calculator")]
+        public void GivenIHaveEnteredIntoTheCalculator(int first)
+        {
+            _calculator.FirstNumber = first;
+        }
+
+
+        [Given(@"I also have entered (.*) into the calculator")]
+        public void GivenIAlsoHaveEnteredIntoTheCalculator(int second)
+        {
+            _calculator.SecondNumber = second;
+        }
+
+        [When(@"I press add button")]
+        public void WhenIPressAddButton()
+        {
+            _result = _calculator.Divide();
+        }
+
+        [Then(@"the result must be (.*) on the screen")]
+        public void ThenTheResultMustBeOnTheScreen(int result)
+        {
+            _result.Should().Be(result);
+        }
+
+
+
 
     }
 }
