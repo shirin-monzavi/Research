@@ -4,7 +4,6 @@ Calculator for adding two numbers
 
 @calculator
 
-
 Scenario: Add two numbers
 	Given the first number is 50
 	And the second number is 70
@@ -18,7 +17,7 @@ Scenario: Subtract two numbers
 	Then  the result should be 50
 
 
-Scenario: Divide two numbers
+Scenario Outline: Divide two numbers
 	Given I have entered <First> into the calculator
 	And   I also have entered <Second> into the calculator
 	When  I press add button
