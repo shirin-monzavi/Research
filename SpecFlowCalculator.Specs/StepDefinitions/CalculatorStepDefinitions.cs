@@ -5,7 +5,6 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
-        // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
         private readonly Calculator _calculator = new Calculator();
         private readonly ScenarioContext _senarioContext;
         private int _result;
@@ -13,6 +12,13 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
         public CalculatorStepDefinitions(ScenarioContext senarioContext)
         {
             _senarioContext = senarioContext;
+        }
+
+        [BeforeScenario]
+        public void Setup(ScenarioContext scenarioContext)
+        {
+            _calculator.FirstNumber = 0;
+            _calculator.SecondNumber = 0;
         }
 
         [Given("the first number is (.*)")]
@@ -31,18 +37,23 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
         public void WhenTheTwoNumbersAreAdded()
         {
             _result = _calculator.Add();
+
+            _senarioContext.Add("result", _result);
         }
 
         [When(@"the two numbers are subtracted")]
         public void WhenTheTwoNumbersAreSubtracted()
         {
             _result = _calculator.Subtract();
+            _senarioContext.Add("result", _result);
         }
 
         [Then("the result should be (.*)")]
         public void ThenTheResultShouldBe(int result)
         {
-            _result.Should().Be(result);
+            var findResult = _senarioContext.Get<int>("result");
+
+            findResult.Should().Be(result);
         }
 
 
@@ -63,6 +74,8 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
         public void WhenIPressAddButton()
         {
             _result = _calculator.Divide();
+
+            _senarioContext.Add("result", _result);
         }
 
         [Then(@"the result must be (.*) on the screen")]
@@ -70,9 +83,5 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
         {
             _result.Should().Be(result);
         }
-
-
-
-
     }
 }
