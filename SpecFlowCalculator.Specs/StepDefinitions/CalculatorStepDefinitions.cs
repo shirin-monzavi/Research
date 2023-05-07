@@ -3,7 +3,7 @@ using FluentAssertions;
 namespace SpecFlowCalculator.Specs.StepDefinitions
 {
     [Binding]
-    public sealed class CalculatorStepDefinitions
+    public sealed class CalculatorStepDefinitions : Steps
     {
         private readonly Calculator _calculator = new Calculator();
         private readonly ScenarioContext _senarioContext;
@@ -83,5 +83,26 @@ namespace SpecFlowCalculator.Specs.StepDefinitions
         {
             _result.Should().Be(result);
         }
+
+        [Given(@"the first number (.*) is defined")]
+        public void GivenTheFirstNumberIsDefined(int p0)
+        {
+            Given(String.Format("the first number is {0}", p0));
+        }
+
+        [Given(@"the second number (.*) is defined")]
+        public void GivenTheSecondNumberIsDefined(int p0)
+        {
+            Given(String.Format("the second number is {0}", p0));
+        }
+
+        [When(@"I press multiply button")]
+        public void WhenIPressMultiplyButton()
+        {
+            _result = _calculator.multiply();
+
+            _senarioContext.Add("result", _result);
+        }
+
     }
 }

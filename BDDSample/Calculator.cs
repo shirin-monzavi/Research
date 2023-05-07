@@ -18,4 +18,9 @@
     {
         return FirstNumber / SecondNumber;
     }
+
+    public int multiply()
+    {
+        return FirstNumber * SecondNumber;
+    }
 }
