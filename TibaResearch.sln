@@ -119,6 +119,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentQueueSample", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrenStackSample", "ConcurrenStackSample\ConcurrenStackSample.csproj", "{C1CBAB29-B7CF-4C89-8912-B6F9EEA1FF35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcurrentBagSample", "ConcurrentBagSample\ConcurrentBagSample.csproj", "{A575D632-E082-4D42-8D53-01D0D55C5678}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +295,10 @@ Global
 		{C1CBAB29-B7CF-4C89-8912-B6F9EEA1FF35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1CBAB29-B7CF-4C89-8912-B6F9EEA1FF35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1CBAB29-B7CF-4C89-8912-B6F9EEA1FF35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A575D632-E082-4D42-8D53-01D0D55C5678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A575D632-E082-4D42-8D53-01D0D55C5678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A575D632-E082-4D42-8D53-01D0D55C5678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A575D632-E082-4D42-8D53-01D0D55C5678}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -341,6 +347,7 @@ Global
 		{03C9D431-6887-4E0C-BC13-6FFFFC472AC1} = {34BEE5C9-2FCD-43A6-BA21-0AFD9070EA9D}
 		{D9AC3007-A644-4DE5-8DCD-0194AE70A0AC} = {C61F24F8-0F89-4DFF-BFCA-2F342C353B80}
 		{C1CBAB29-B7CF-4C89-8912-B6F9EEA1FF35} = {C61F24F8-0F89-4DFF-BFCA-2F342C353B80}
+		{A575D632-E082-4D42-8D53-01D0D55C5678} = {C61F24F8-0F89-4DFF-BFCA-2F342C353B80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86D6AF66-426B-4F67-82A7-FA37413B8044}
