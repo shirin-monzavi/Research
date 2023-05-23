@@ -1,14 +1,15 @@
-﻿namespace BuilderPatternPractise
+﻿using BuilderPatternPractise.Targets;
+
+namespace BuilderPatternPractise.Managers
 {
-    public class SubTargetManager : SubTargetManager<ISubTargetManager, ISubTarget,SubTarget>, ISubTargetManager
+    public class SubTargetManager : SubTargetManager<ISubTargetManager, ISubTarget, SubTarget>, ISubTargetManager
     {
         public SubTargetManager(ISubTarget target = null) : base(target)
         {
         }
-
     }
 
-    public abstract class SubTargetManager<TSelf, TITarget,TTarget> :
+    public abstract class SubTargetManager<TSelf, TITarget, TTarget> :
         TargetManager<TSelf, TITarget, TTarget>,
         ISubTargetManager<TSelf, TITarget>
 
@@ -22,6 +23,7 @@
 
             WithProp5(target.Prop5);
         }
+
         private string prop5;
         public string Prop5 => prop5;
 

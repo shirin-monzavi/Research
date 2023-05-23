@@ -1,4 +1,4 @@
-﻿namespace BuilderPatternPractise
+﻿namespace BuilderPatternPractise.Options
 {
     public interface ISubTargetOptions : ITargetOptions
     {

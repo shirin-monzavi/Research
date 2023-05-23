@@ -1,4 +1,6 @@
-﻿namespace BuilderPatternPractise
+﻿using BuilderPatternPractise.Options;
+
+namespace BuilderPatternPractise.Targets
 {
     public class SubTarget : Target, ISubTarget
     {

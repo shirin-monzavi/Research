@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BuilderPatternPractise.Targets;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace BuilderPatternPractise
+namespace BuilderPatternPractise.Managers
 {
     public class TargetManager : TargetManager<ITargetManager, ITarget, Target>, ITargetManager
     {
@@ -16,15 +17,15 @@ namespace BuilderPatternPractise
         {
             return (TargetManager)manager;
         }
-
-
     }
+
     public abstract class TargetManager<TSelf, TITarget, TTarget> : ITargetManager<TSelf, TITarget>
         where TSelf : ITargetManager<TSelf, TITarget>
         where TITarget : class, ITarget
         where TTarget : TITarget
     {
         private static ConcurrentDictionary<Type, MethodInfo> dic = new();
+
         public TargetManager(TITarget? target = null)
         {
             if (target == null) return;
@@ -63,13 +64,11 @@ namespace BuilderPatternPractise
             return this;
         }
 
-
         public TSelf WithProp3(string value)
         {
             prop3 = value;
             return this;
         }
-
 
         public TSelf WithProp4(string value)
         {

@@ -1,3 +1,6 @@
+using BuilderPatternPractise.Managers;
+using BuilderPatternPractise.Targets;
+using BuilderPatternPractise.Test;
 using NSubstitute;
 using Xunit;
 
@@ -58,7 +61,6 @@ namespace BuilderPatternPractise
             .WithProp1(2)
             .Update(target)
             ;
-
 
             //assert
             Assert.Equal(2, target.Prop1);
@@ -126,7 +128,6 @@ namespace BuilderPatternPractise
             sut.Received(1).Build();
         }
 
-
         [Fact]
         public void Test8()
         {
@@ -143,13 +144,11 @@ namespace BuilderPatternPractise
             sut.Received(1).Build();
         }
 
-
         [Fact]
         public void Test9()
         {
             //arrange
             var sut = new SubTargetManager();
-
 
             //act
             var target = sut.WithProp1(1).WithProp2(2).Build();
@@ -164,12 +163,11 @@ namespace BuilderPatternPractise
             //arrange
             var sut = new TestTargetManager();
 
-
             //act
             var target = sut
                 .WithSomeProp()
                 .WithSomeOtherProp()
-                .targetManager.WithProp4("test4")
+                .Manager.WithProp4("test4")
                 .Build();
 
             //assert
@@ -183,7 +181,6 @@ namespace BuilderPatternPractise
         //{
         //    //arrange
         //    var sut = new TestTargetManager();
-
 
         //    //act
         //    var target = sut.WithSomeProp()

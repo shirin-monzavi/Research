@@ -1,4 +1,7 @@
-﻿namespace BuilderPatternPractise
+﻿using BuilderPatternPractise.Options;
+using BuilderPatternPractise.Targets;
+
+namespace BuilderPatternPractise.Managers
 {
     public interface ISubTargetManager : ISubTargetManager<ISubTargetManager, ISubTarget>
     {
