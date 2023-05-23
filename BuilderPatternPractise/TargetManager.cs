@@ -11,6 +11,13 @@ namespace BuilderPatternPractise
         public TargetManager(ITarget? target = null) : base(target)
         {
         }
+
+        public static implicit operator TargetManager(SubTargetManager manager)
+        {
+            return (TargetManager)manager;
+        }
+
+
     }
     public abstract class TargetManager<TSelf, TITarget, TTarget> : ITargetManager<TSelf, TITarget>
         where TSelf : ITargetManager<TSelf, TITarget>
