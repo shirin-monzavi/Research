@@ -3,7 +3,7 @@
     public abstract class DevTeamAbstract
     {
         protected MediatorManager Manager;
-        protected string Name;
+        public string Name;
 
         public DevTeamAbstract(MediatorManager manager)
         {

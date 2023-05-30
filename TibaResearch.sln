@@ -143,7 +143,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryDesingPatternSample"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonDesignPatternSample", "SingletonDesignPatternSample\SingletonDesignPatternSample.csproj", "{47EF96D4-90D3-4ED4-9CEF-4D3FC77562CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorDesingPattern", "MediatorDesingPattern\MediatorDesingPattern.csproj", "{68136C05-DD40-4B4F-BC44-571F5E9816EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatorDesingPattern", "MediatorDesingPattern\MediatorDesingPattern.csproj", "{68136C05-DD40-4B4F-BC44-571F5E9816EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketBookingRequestProcessorTest", "TicketBookingRequestProcessorTest\TicketBookingRequestProcessorTest.csproj", "{6A4F31E2-B07A-446C-864F-2120959792D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketBooking", "TicketBooking\TicketBooking.csproj", "{89F21020-FF32-4501-B48C-B154DE37528D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -363,6 +367,14 @@ Global
 		{68136C05-DD40-4B4F-BC44-571F5E9816EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68136C05-DD40-4B4F-BC44-571F5E9816EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68136C05-DD40-4B4F-BC44-571F5E9816EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4F31E2-B07A-446C-864F-2120959792D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4F31E2-B07A-446C-864F-2120959792D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4F31E2-B07A-446C-864F-2120959792D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4F31E2-B07A-446C-864F-2120959792D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F21020-FF32-4501-B48C-B154DE37528D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F21020-FF32-4501-B48C-B154DE37528D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F21020-FF32-4501-B48C-B154DE37528D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F21020-FF32-4501-B48C-B154DE37528D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -421,6 +433,8 @@ Global
 		{2E4A5DB4-C387-417F-BACE-1922C0E1BD89} = {34BEE5C9-2FCD-43A6-BA21-0AFD9070EA9D}
 		{47EF96D4-90D3-4ED4-9CEF-4D3FC77562CD} = {34BEE5C9-2FCD-43A6-BA21-0AFD9070EA9D}
 		{68136C05-DD40-4B4F-BC44-571F5E9816EC} = {34BEE5C9-2FCD-43A6-BA21-0AFD9070EA9D}
+		{6A4F31E2-B07A-446C-864F-2120959792D0} = {9FB4945E-586E-48DB-B72C-F43DFF466C2C}
+		{89F21020-FF32-4501-B48C-B154DE37528D} = {9FB4945E-586E-48DB-B72C-F43DFF466C2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86D6AF66-426B-4F67-82A7-FA37413B8044}
