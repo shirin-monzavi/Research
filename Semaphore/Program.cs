@@ -1,24 +1,28 @@
-﻿class Program
+﻿internal class Program
 {
+    private static Semaphore sem = new Semaphore(0, 3);
 
-    static Semaphore sem = new Semaphore(2, 3);
-    public static async Task Main(string[] arg)
+    public static void Main(string[] arg)
     {
         for (int i = 0; i < 10; i++)
         {
-            _ = DoSomeWorkAsync(i);
+            Thread threadObject = new Thread(() => DoSomeWorkAsync(i))
+            {
+                Name = "Thread " + i
+            };
+            threadObject.Start();
         }
         Console.ReadKey();
     }
 
-    private static async Task<bool> DoSomeWorkAsync(int i)
+    private static bool DoSomeWorkAsync(int i)
     {
         try
         {
             sem.WaitOne();
 
             Console.WriteLine($"{i} doing its");
-            await DoNothing(i);
+            DoNothing(i);
             Console.WriteLine($"{i} exit");
         }
         finally
@@ -29,11 +33,11 @@
         return true;
     }
 
-    private static async Task<string> DoNothing(int i)
+    private static string DoNothing(int i)
     {
         Console.WriteLine($"Start to do nothing {i}");
 
-        await Task.Delay(1000);
+        Task.Delay(1000);
 
         Console.WriteLine($"Do nothing {i}");
 

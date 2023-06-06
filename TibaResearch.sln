@@ -145,9 +145,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonDesignPatternSampl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatorDesingPattern", "MediatorDesingPattern\MediatorDesingPattern.csproj", "{68136C05-DD40-4B4F-BC44-571F5E9816EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketBookingRequestProcessorTest", "TicketBookingRequestProcessorTest\TicketBookingRequestProcessorTest.csproj", "{6A4F31E2-B07A-446C-864F-2120959792D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketBookingRequestProcessorTest", "TicketBookingRequestProcessorTest\TicketBookingRequestProcessorTest.csproj", "{6A4F31E2-B07A-446C-864F-2120959792D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketBooking", "TicketBooking\TicketBooking.csproj", "{89F21020-FF32-4501-B48C-B154DE37528D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketBooking", "TicketBooking\TicketBooking.csproj", "{89F21020-FF32-4501-B48C-B154DE37528D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IsAssignableFrom", "IsAssignableFrom", "{113027E8-814A-4AB7-8B76-181B57C5706B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsAssignableFrom", "IsAssignableFrom\IsAssignableFrom.csproj", "{6B4085FC-85D8-499D-9173-9107CE335669}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -375,6 +379,10 @@ Global
 		{89F21020-FF32-4501-B48C-B154DE37528D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89F21020-FF32-4501-B48C-B154DE37528D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89F21020-FF32-4501-B48C-B154DE37528D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B4085FC-85D8-499D-9173-9107CE335669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4085FC-85D8-499D-9173-9107CE335669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4085FC-85D8-499D-9173-9107CE335669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4085FC-85D8-499D-9173-9107CE335669}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -435,6 +443,7 @@ Global
 		{68136C05-DD40-4B4F-BC44-571F5E9816EC} = {34BEE5C9-2FCD-43A6-BA21-0AFD9070EA9D}
 		{6A4F31E2-B07A-446C-864F-2120959792D0} = {9FB4945E-586E-48DB-B72C-F43DFF466C2C}
 		{89F21020-FF32-4501-B48C-B154DE37528D} = {9FB4945E-586E-48DB-B72C-F43DFF466C2C}
+		{6B4085FC-85D8-499D-9173-9107CE335669} = {113027E8-814A-4AB7-8B76-181B57C5706B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86D6AF66-426B-4F67-82A7-FA37413B8044}
