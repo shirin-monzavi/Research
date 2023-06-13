@@ -18,7 +18,7 @@ namespace BuilderPatternPractise.Test
     {
         public TSelf WithSomeSomeProp()
         {
-            Manager.WithProp1(1);
+            Manager.WithProp1(1).WithProp5("test");
 
             return this;
         }

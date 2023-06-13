@@ -32,9 +32,7 @@ namespace BuilderPatternPractise.Test
             //Arrange
 
             //Act
-            var actual = sut.WithSomeProp()
-                        .Manager.WithProp1(1)
-                        .Build();
+            var actual = sut.WithSomeProp().WithSomeOtherProp().Manager.Build();
 
             //Assert
             Assert.Equal(1, actual.Prop1);

@@ -9,7 +9,7 @@ namespace BuilderPatternPractise.Targets
 
         public SubTarget(ISubTargetOptions options) : base(options)
         {
-            prop5 = options.Prop5;
+            setUp(options);
         }
 
         public void Update(ISubTargetOptions options)

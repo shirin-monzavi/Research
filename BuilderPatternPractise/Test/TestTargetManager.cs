@@ -38,11 +38,6 @@ namespace BuilderPatternPractise.Test
             return this;
         }
 
-        public TITarget Build()
-        {
-            return Manager.Build();
-        }
-
         public static implicit operator TSelf(TestTargetManager<TSelf, TManager, TITarget> manager)
         {
             return (TSelf)manager;

@@ -37,6 +37,25 @@ namespace BuilderPatternPractise
         }
 
         [Fact]
+        public void Test11()
+        {
+            //arrange
+            var sut = new TargetManager();
+            var target = sut.WithProp1(1)
+            .WithProp2(2)
+            .Build();
+
+            //act
+            new TargetManager(target)
+                .WithProp1(2)
+                .Update(target);
+
+            //assert
+            Assert.Equal(2, target.Prop1);
+            Assert.Equal(2, target.Prop2);
+        }
+
+        [Fact]
         public void Test2()
         {
             //arrange
